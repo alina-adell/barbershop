@@ -16,7 +16,7 @@ function SASS() {
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write("."))
-        .pipe(dest('dist/src/')) //// выгружаем результат
+        .pipe(dest('./dist/src/')) //// выгружаем результат
         .pipe(browserSync.stream());
 
 }
@@ -55,7 +55,7 @@ exports.scripts = scripts;
 function myServer() {
     browserSync.init({
         server: {
-            baseDir: "./dist" // папка для локального сервера
+            baseDir: "./" // папка для локального сервера
         },
         notify: false
     });
@@ -67,4 +67,4 @@ function myServer() {
     watch('./scripts/*', series('scripts'))
 }
 
-exports.default = series( SASS, html, fonts, images, scripts, myServer );
+exports.default = series( SASS,html, fonts, images, scripts, myServer );
