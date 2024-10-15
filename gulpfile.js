@@ -9,15 +9,15 @@ const sourcemaps = require("gulp-sourcemaps");
 const notify = require("gulp-notify");
 
 
+
 function SASS() {
-    return src('./styles/*.scss')  // берём все SASS-файлы
+    return src('./styles/*.css','./styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on("error", notify.onError()))
         .pipe(cssmin('bundle.min.css'))
         .pipe(sourcemaps.write("."))
         .pipe(dest('dist/styles/')) //// выгружаем результат
         .pipe(browserSync.stream());
-
 }
 
 exports.SASS = SASS;

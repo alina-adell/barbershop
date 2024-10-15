@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>БородачЪ</title>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <link rel="stylesheet" href="styles/bundle.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-image: url(images/bodybackground.png)"></body>
->
+<body>
 <header class="header">
     <div class="container header_container">
         <div class="logo">
@@ -573,9 +568,8 @@
             чтобы быть в курсе всех акций!
         </div>
         <div class="aside__action">
-            <button class="btn aside__second__btn">Подписаться</button>
+            <a href="#" class="aside__second__btn">Подписаться</a>
         </div>
-
     </div>
 </section>
 <section class="price">
@@ -821,22 +815,22 @@
             <div class="title">Заполните данные для оформления заявки</div>
             <div class="form-grid">
                 <div class="input-group">
-                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="text" id="name" placeholder="Ваше имя" required name="name">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="services" class="with-arrow" placeholder="Выберите услугу" required>
+                    <input type="text" id="services" class="with-arrow" placeholder="Выберите услугу" required name="services">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="date" class="with-arrow" placeholder="Введите дату" required>
+                    <input type="text" id="date" name="date" class="with-arrow" placeholder="Введите дату" required>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="phone" placeholder="Ваш телефон" required>
+                    <input type="text" id="phone" name="phone" placeholder="Ваш телефон" required >
                 </div>
                 <div class="input-group">
-                    <input type="text" id="masters" class="with-arrow" placeholder="Выберете мастера" required>
+                    <input type="text" id="masters" name="masters" class="with-arrow" placeholder="Выберете мастера" required>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="time" placeholder="Выберете время" required>
+                    <input type="text" id="time" name="time" placeholder="Выберете время" required >
                 </div>
             </div>
             <button class="submit">Оформить заявку</button>
@@ -869,21 +863,26 @@
                 </div>
                 <div class="networks_icon">
                     <div>
+                        <a href="">
                         <img src="images/vk.png">
+                        </a>
                     </div>
                     <div>
+                        <a href="">
                         <img src="images/insta.png">
+                        </a>
                     </div>
                     <div>
+                        <a href="">
                         <img src="images/fb.png">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="mail">
-                E-mail: info@barberclub.ru
-                <div class="phone"> +7 912 816-93-96</div>
+                <a href="mailto:info@barberclub.ru">E-mail: info@barberclub.ru</a>
+                <a href="tel:+79128169396" class="phone">+7 912 816-93-96</a>
             </div>
-
         </div>
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.967123365035!2d37.53502656087098!3d55.749243702146025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdda487f57f%3A0xd1159fc9bbe7cfec!2z0JHQsNGI0L3RjyDQvdCwINCd0LDQsdC10YDQtdC20L3QvtC5!5e0!3m2!1sru!2ses!4v1727035270052!5m2!1sru!2ses"
