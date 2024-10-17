@@ -11,7 +11,7 @@ const notify = require("gulp-notify");
 
 
 function SASS() {
-    return src('./styles/*.css','./styles/*.scss')
+    return src('./styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on("error", notify.onError()))
         .pipe(cssmin('bundle.min.css'))

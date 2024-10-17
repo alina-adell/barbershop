@@ -42,6 +42,7 @@ $(document).ready(function(){
             return '<button type="button" role="tab" id="slick-slide-control' + dotIndex + '" aria-controls="slick-slide' + index + '" aria-label="' + (dotIndex + 1) + ' of ' + visibleDots + '" tabindex="-1" class="' + dotClass + '">' + (dotIndex + 1) + '</button>';
         }
     });
+    new WOW().init();
 });
 
 document.getElementById('burger').onclick = function () {
