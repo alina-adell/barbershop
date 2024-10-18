@@ -8,9 +8,6 @@ const closeFormBtn = document.querySelector('.close-form');
 const container = document.querySelector('.container');
 let loader = $('.loader');
 
-
-
-
 $(document).ready(function(){
     $('.slider').slick({
         dots: true,
