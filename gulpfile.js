@@ -14,9 +14,9 @@ function SASS() {
     return src('./styles/*.scss', { style: './' })
         .pipe(sourcemaps.init())
         .pipe(sass().on("error", notify.onError()))
-        .pipe(cssmin('bundle.min.css'))
+        .pipe(cssmin('styles/bundle.min.css'))
         .pipe(sourcemaps.write("."))
-        .pipe(dest('dist/styles/')) //// выгружаем результат
+        .pipe(dest('dist/')) //// выгружаем результат
         .pipe(browserSync.stream());
 }
 
