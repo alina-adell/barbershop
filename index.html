@@ -3,17 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>БородачЪ</title>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="styles/slick.min.css"/>
-    <link rel="stylesheet" href="styles/slick-theme.min.css"/>
+    <link rel="stylesheet" href="styles/bundle.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-image: url(images/bodybackground.png)"></body>
->
+<body>
 <header class="header">
     <div class="container header_container">
         <div class="logo">
@@ -47,7 +40,7 @@
                 <path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/>
             </svg>
         </div>
-        <div id="menuModal" >
+        <div id="menuModal">
             <div class="menu__close">
                 <svg id="menu__close" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -76,7 +69,7 @@
                     <a href="#" class="menu__link">Барберы</a>
                 </li>
                 <li class="menuModal__item">
-                    <a href="#" class="menu__link">О нас</a>
+                    <a href="#" class="menu__link">О dfc</a>
                 </li>
             </ul>
 
@@ -575,9 +568,8 @@
             чтобы быть в курсе всех акций!
         </div>
         <div class="aside__action">
-            <button class="btn aside__second__btn">Подписаться</button>
+            <a href="#" class="aside__second__btn">Подписаться</a>
         </div>
-
     </div>
 </section>
 <section class="price">
@@ -731,9 +723,11 @@
         <div class="aside__action wow animate__zoomIn" data-wow-duration="1s">
             <button class="btn aside__thid__btn" id="popup-trigger">Получить скидку</button>
         </div>
-        <div class="overlay"></div>
         <div class="popup" id="popup">
-            <p>Просто запишитесь в наш барбершоп и приходите - скидку мы применим после осуществления услуги.</p>
+            <div class="thanks">Спасибо что выбрали
+                Strong Club!
+            </div>
+            <div class="call">Наш администратор свяжется с вами в течении 10 минут, для уточнения деталей.</div>
             <button class="close-popup">×</button>
         </div>
     </div>
@@ -754,20 +748,11 @@
                         <p>
                             Алексей
                         </p>
-                            <button class="open-modal">Записаться</button>
-                        <div class="modal" id="registration-modal">
-                            <div class="modal__content">
-                                <form class="registration-form">
-                                    <input type="text" id="name" name="name" placeholder="Ім'я">
-                                    <button type="submit">Відправити</button>
-                                </form>
-                                <button class="close-modal">Закрити</button>
-                            </div>
-                        </div>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/marat.png" alt="Мастер 2">
+                    <img src="images/marat.png" alt="Мастер 2" width="336" height="404">
                     <div class="info">
                         <p>Марат</p>
                         <button class="open-modal">Записаться</button>
@@ -784,48 +769,76 @@
                     <img src="images/Alex.png" alt="Мастер 1">
                     <div class="info">
                         <p>Алексей</p>
-                         <button class="open-modal">Записаться</button>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/marat.png" alt="Мастер 2">
+                    <img src="images/marat.png" alt="Мастер 2" width="336" height="404">
                     <div class="info">
                         <p>Марат</p>
-                         <button class="open-modal">Записаться</button>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="images/Katy.png" alt="Мастер 3">
                     <div class="info">
                         <p>Екатерина</p>
-                         <button class="open-modal">Записаться</button>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="images/Alex.png" alt="Мастер 1">
                     <div class="info">
                         <p>Алексей</p>
-                         <button class="open-modal">Записаться</button>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/marat.png" alt="Мастер 2">
+                    <img src="images/marat.png" alt="Мастер 2" width="336" height="404">
                     <div class="info">
                         <p>Марат</p>
-                         <button class="open-modal">Записаться</button>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="images/Katy.png" alt="Мастер 3">
                     <div class="info">
                         <p>Екатерина</p>
-                         <button class="open-modal">Записаться</button>
+                        <button class="open-modal">Записаться</button>
                     </div>
                 </div>
-
             </div>
-
+            <div class="nav-masters">
+            </div>
         </div>
+        <div class="popuprequest" id="popuprequest">
+            <div class="title">Заполните данные для оформления заявки</div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Ваше имя" required name="name">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="services" class="with-arrow" placeholder="Выберите услугу" required name="services">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="date" name="date" class="with-arrow" placeholder="Введите дату" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="phone" name="phone" placeholder="Ваш телефон" required >
+                </div>
+                <div class="input-group">
+                    <input type="text" id="masters" name="masters" class="with-arrow" placeholder="Выберете мастера" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="time" name="time" placeholder="Выберете время" required >
+                </div>
+            </div>
+            <button class="submit">Оформить заявку</button>
+            <button class="close-form">×</button>
+        </div>
+    </div>
+    <div class="loader">
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
 </section>
 <section class="address">
@@ -850,24 +863,31 @@
                 </div>
                 <div class="networks_icon">
                     <div>
+                        <a href="">
                         <img src="images/vk.png">
+                        </a>
                     </div>
                     <div>
+                        <a href="">
                         <img src="images/insta.png">
+                        </a>
                     </div>
                     <div>
+                        <a href="">
                         <img src="images/fb.png">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="mail">
-                E-mail: info@barberclub.ru
-                <div class="phone"> +7 912 816-93-96</div>
+                <a href="mailto:info@barberclub.ru">E-mail: info@barberclub.ru</a>
+                <a href="tel:+79128169396" class="phone">+7 912 816-93-96</a>
             </div>
-
         </div>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.967123365035!2d37.53502656087098!3d55.749243702146025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdda487f57f%3A0xd1159fc9bbe7cfec!2z0JHQsNGI0L3RjyDQvdCwINCd0LDQsdC10YDQtdC20L3QvtC5!5e0!3m2!1sru!2ses!4v1727035270052!5m2!1sru!2ses" width="862" height="436" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.967123365035!2d37.53502656087098!3d55.749243702146025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdda487f57f%3A0xd1159fc9bbe7cfec!2z0JHQsNGI0L3RjyDQvdCwINCd0LDQsdC10YDQtdC20L3QvtC5!5e0!3m2!1sru!2ses!4v1727035270052!5m2!1sru!2ses"
+                    width="862" height="436" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
@@ -881,10 +901,7 @@
 </footer>
 <script src="scripts/jquery-3.7.1.min.js"></script>
 <script src="scripts/slick.min.js"></script>
-<script src="scripts/script.js"></script>
 <script src="scripts/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
+<script src="scripts/script.js"></script>
 </body>
 </html>
