@@ -12,7 +12,7 @@ $(document).ready(function(){
     $('.slider').slick({
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 400,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
@@ -24,9 +24,9 @@ $(document).ready(function(){
         appendDots: $('.nav-masters'),
         responsive: [
             {
-                breakpoint: 426,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 1, // При ширине экрана меньше 425px отображаем 2 слайда
+                    slidesToShow: 1, //
                     slidesToScroll: 1
                 }
             }
