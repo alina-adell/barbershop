@@ -1,8 +1,9 @@
 'use strict';
 const popupTrigger = document.getElementById('popup-trigger');
 const popup = document.getElementById('popup');
+const popup2 = document.getElementById('popup2');
 const closePopup = document.querySelector('.close-popup');
-const openModalButtons = document.querySelectorAll('.design .open-modal');
+const openModalButtons = document.querySelectorAll('.design .open-modal, .main__btn');
 const formRequest = document.getElementById('popuprequest');
 const closeFormBtn = document.querySelector('.close-form');
 const container = document.querySelector('.container');
@@ -24,7 +25,7 @@ $(document).ready(function(){
         appendDots: $('.nav-masters'),
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 705,
                 settings: {
                     slidesToShow: 1, //
                     slidesToScroll: 1
@@ -76,35 +77,36 @@ const formGrid = popupRequest.querySelector('.form-grid');
 const inputGroups = formGrid.querySelectorAll('.input-group');
 const submitButton = popupRequest.querySelector('.submit');
 const closeFormButton = popupRequest.querySelector('.close-form');
-const successMessage = popupRequest.querySelector('.success-message');
+
+function validateInput(input) {
+    const hasValue = input.value && input.value !== ''; // Проверяем наличие значения
+
+    input.classList.toggle('error', !hasValue); // Добавляем или удаляем класс 'error' в зависимости от hasValue
+
+    const errorMessage = input.parentNode.querySelector('.error-message');
+    if (errorMessage) {
+        input.parentNode.removeChild(errorMessage);
+    }
+
+    if (!hasValue) {
+        const errorMessage = document.createElement('div');
+        errorMessage.classList.add('error-message');
+        errorMessage.textContent = 'Поле обязательно для заполнения';
+        input.parentNode.appendChild(errorMessage);
+        return false;
+    }
+    return true;
+}
 
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     let isValid = true;
-    let data = {};
-
+    const data = {};
 
     inputGroups.forEach((inputGroup) => {
-        const input = inputGroup.querySelector('input');
-        const errorMessage = inputGroup.querySelector('.error-message');
-
-
-        if (!input.value) {
-            isValid = false;
-            input.classList.add('error');
-            if (!errorMessage) {
-                const errorMessageElement = document.createElement('div');
-                errorMessageElement.classList.add('error-message');
-                errorMessageElement.textContent = 'Поле обязательно для заполнения';
-                inputGroup.appendChild(errorMessageElement);
-            }
-        } else {
-            input.classList.remove('error'); // Remove the error class from the input
-            if (errorMessage) {
-                inputGroup.removeChild(errorMessage);
-            }
-        }
-        if (isValid) {
+        const input = inputGroup.querySelector('input, select'); // Валидация для всех типов input
+        isValid = validateInput(input) && isValid;
+        if (input.name) {
             data[input.name] = input.value;
         }
     });
@@ -122,11 +124,10 @@ submitButton.addEventListener('click', (event) => {
                     console.log(msg);
                     if (msg.success === 1) {
                         formRequest.style.display = 'none';
-                        const successMessage = document.createElement('div');
-                        successMessage.classList.add('success-message');
-                        successMessage.textContent = 'Спасибо!';
-                        const container = document.querySelector('.masters .container');
-                        container.appendChild(successMessage);
+                        popup2.style.display = 'block';
+                        closePopup.addEventListener('click', () => {
+                            popup2.style.display = 'none';
+                        });
                     } else {
                         alert('Возникла ошибка при оформлении заявки, позвоните нам или повторите позже.');
                     }
@@ -137,6 +138,37 @@ submitButton.addEventListener('click', (event) => {
 closeFormButton.addEventListener('click', () => {
     popupRequest.style.display = 'none';
 });
+
+function populateSelectWithServices() {
+    const servicesList = document.querySelectorAll('.list__price_info');
+    const selectElement = document.getElementById('services');
+
+    servicesList.forEach(service => {
+        const serviceName = service.textContent.trim(); // Извлекаем текст услуги
+        const option = document.createElement('option');
+        option.value = serviceName;
+        option.textContent = serviceName;
+        selectElement.appendChild(option);
+    });
+}
+// Вызываем функцию при загрузке страницы или после загрузки данных
+populateSelectWithServices();
+
+function populateMastersSelect() {
+    const mastersList = document.querySelectorAll('.slide .info p');
+    const selectElement = document.getElementById('masters');
+
+    mastersList.forEach(master => {
+        const masterName = master.textContent.trim();
+        const option = document.createElement('option');
+        option.value = masterName;
+        option.textContent = masterName;
+        selectElement.appendChild(option);
+    });
+}
+
+// Вызываем функцию при загрузке страницы или после загрузки данных
+populateMastersSelect();
 
 
 
