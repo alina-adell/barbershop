@@ -119,6 +119,7 @@ body {
     padding-bottom: 39px;
     max-width: 508px;
     font-weight: normal;
+    text-align: left;
   }
 
   .main__text {
@@ -169,12 +170,13 @@ body {
   background-color: rgb(19, 19, 24);
   height: 180px;
   z-index: 245;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: $primary-color;
-    font-size: 16px;
+    font-size: 18px;
     font-family: MullerRegular, sans-serif;
     padding-bottom: 60px;
     padding-top: 60px;
@@ -195,22 +197,21 @@ body {
 
 
   .content__title {
-    font-size: 32px;
-    font-family: LoraRegular, sans-serif;
-    color: $primary-color;
     padding-top: 100px;
     padding-bottom: 60px;
-    max-width: 872px;
-    text-align: center;
-    margin: 0 auto;
 
     h1 {
-      font-weight: normal;
+      margin: 0 auto;
+      max-width: 585px;
+      font-size: 32px;
+      font-family: LoraRegular, sans-serif;
+      color: $primary-color;
+      text-align: center;
     }
   }
 
   .content__main {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     font-family: MullerRegular, sans-serif;
     display: flex;
     justify-content: center;
@@ -266,14 +267,18 @@ body {
   .content__info {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    row-gap: 35px;
+    row-gap: 28px;
     align-items: center;
-
-    .content__img {
-      text-align: center;
-    }
+    font-size: 16px;
+    font-family: MullerRegular, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
   }
 
+  .content__img {
+    text-align: center;
+  }
 }
 
 .aside__second {
@@ -291,11 +296,27 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    column-gap: 262px;
+    column-gap: 260px;
     align-items: center;
     color: $primary-color;
     font-size: 16px;
     font-family: MullerRegular, sans-serif;
+
+    .aside__text {
+      z-index: 112;
+      font-size: 28px;
+      font-family: LoraRegular, sans-serif;
+      color: $primary-color;
+      line-height: 1.2;
+      max-width: 423px;
+      font-weight: bold;
+
+      span {
+        font-weight: bold;
+        color: #ae8959;
+
+      }
+    }
 
     .aside__action {
       z-index: 112;
@@ -316,30 +337,16 @@ body {
         line-height: 3.2;
       }
     }
-
-    .aside__text {
-      z-index: 112;
-      font-size: 28px;
-      font-family: LoraRegular, sans-serif;
-      color: $primary-color;
-      line-height: 1.2;
-      max-width: 423px;
-
-      span {
-        font-weight: 900;
-      }
-    }
   }
 }
 
 .price .container {
   padding-top: 102px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 
   .design {
     position: relative;
     border-left: 1px solid $btn-color;
-
 
     img {
       position: absolute;
@@ -388,7 +395,8 @@ body {
     display: flex;
     justify-content: space-around;
     z-index: 200;
-
+    column-gap: 316px;
+    margin-left: 82px;
 
     .price__info {
       display: grid;
@@ -482,20 +490,8 @@ body {
         color: rgb(255, 255, 255);
         text-align: center;
         z-index: 120;
-        margin-bottom: 79px;
-        max-width: 260px;
+        margin-top: 50px;
         position: relative;
-      }
-
-      .call {
-        margin: 0 auto;
-        font-size: 18px;
-        font-family: MullerRegular, sans-serif;
-        color: rgb(255, 255, 255);
-        line-height: 1.389;
-        text-align: center;
-        z-index: 118;
-        max-width: 387px;
       }
     }
 
@@ -529,12 +525,13 @@ body {
     width: 100%;
   }
 
-  h1 {
+  .masters__title {
     font-size: 32px;
     font-family: LoraRegular, sans-serif;
     color: $primary-color;
     text-align: center;
     padding-bottom: 59px;
+
   }
 
   h2 {
@@ -625,6 +622,57 @@ body {
     }
   }
 
+  .popup2 {
+    width: 50%;
+    height: 484px;
+    display: none;
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    z-index: 200;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 200vw rgba(0, 0, 0, 0.85);
+    background-image: url(../images/mini.png);
+
+    .thank {
+      margin: 0 auto;
+      font-size: 25px;
+      font-family: LoraRegular, sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      z-index: 120;
+      margin-top: 61px;
+      position: relative;
+      max-width: 265px;
+    }
+
+    .call {
+      margin: 0 auto;
+      font-size: 18px;
+      font-family: MullerRegular, sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      max-width: 400px;
+      z-index: 118;
+      margin-top: 79px;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 20px;
+      right: 112px;
+      background: transparent;
+      color: $btn-color;
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 35px;
+    }
+  }
 }
 
 .slick-dots {
@@ -783,7 +831,7 @@ footer {
 
 
 .popuprequest {
-  width: 100% ;
+  width: 100%;
   height: 484px;
   grid-template-columns: 1fr;
   grid-template-rows: auto 0fr;
@@ -814,7 +862,7 @@ footer {
   }
 }
 
-.title {
+.popuprequest .title {
   grid-column: 1;
   grid-row: 1;
   color: rgb(255, 255, 255);
@@ -828,39 +876,42 @@ footer {
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Три колонки одинаковой ширины */
+  grid-template-columns: repeat(3, 223px); /* Три колонки одинаковой ширины */
   grid-gap: 40px;
   column-gap: 67px;
   grid-column: 1;
   grid-row: 2;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
   position: relative;
+
 }
 
-.input-group input {
+.input-group input, select {
   background: transparent;
   border-width: 1px;
   border-color: rgb(174, 137, 89);
   border-style: solid;
-  width: 223px;
   height: 43px;
   z-index: 88;
   color: white;
   padding-left: 10px;
 }
 
+
 .input-group input::placeholder {
   padding-left: 10px;
+  color: white;
 }
 
 .input-group input.error {
   border-color: red;
 }
+
 
 .submit {
   grid-column: 1 / span 3;
@@ -1008,11 +1059,11 @@ footer {
   top: 0;
   left: 0;
   font-size: 47px;
-  font-family: Tavolga, sans-serif;
-  color: #e1a32e;
+  font-family: MullerRegular, sans-serif;
+  color: $btn-color;
   margin-left: 17px;
-  box-shadow: inset 0 0 0 200vw rgba(0, 0, 0, 0.8);
   justify-content: center;
+  border: #ae8959 1px solid;
 }
 
 .mail {

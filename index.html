@@ -72,7 +72,6 @@
                     <a href="#" class="menu__link">О нас</a>
                 </li>
             </ul>
-
         </div>
     </div>
 </header>
@@ -342,8 +341,7 @@
 </section>
 <section class="container content">
     <div class="title content__title">
-        <h1> Strong Club – это намного больше,
-            чем просто мужская парикмахерская</h1>
+        <h1> Strong Club – это намного больше, чем просто мужская парикмахерская</h1>
     </div>
     <div class="content__main">
         <div class="content__advantages">
@@ -724,10 +722,7 @@
             <button class="btn aside__thid__btn" id="popup-trigger">Получить скидку</button>
         </div>
         <div class="popup" id="popup">
-            <div class="thanks">Спасибо что выбрали
-                Strong Club!
-            </div>
-            <div class="call">Наш администратор свяжется с вами в течении 10 минут, для уточнения деталей.</div>
+            <div class="thanks"> Просто запишитесь в наш барбершоп и приходите – скидку мы применим после осуществления услуги </div>
             <button class="close-popup">×</button>
         </div>
     </div>
@@ -735,52 +730,50 @@
 <section class="masters">
     <div class="container">
         <div class="design">
-            <h1 class="title masters__title">Наши мастера</h1>
+            <div class="title masters__title">Наши мастера</div>
             <h2>Вот они, простые герои, несущие в мир стиль и безупречный внешний вид. Команда Barber Club каждый день
                 трудится над тем, чтобы создавать и поддерживать ваш индивидуальный стиль, подчеркивать характер и
                 превращать недостатки в достоинства.</h2>
             <div class="slider">
                 <div class="slide">
-                    <img src="images/Alex.png" alt="Мастер 1">
+                    <img src="images/Maksim.jpg" alt="Мастер 2" width="336" height="404">
                     <div class="info">
-                        <p>
-                            Алексей
-                        </p>
+                        <p>Максим</p>
                         <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/marat.png" alt="Мастер 2" width="336" height="404">
+                    <img src="images/Yan.jpg" alt="Мастер 1">
                     <div class="info">
-                        <p>Марат</p>
+                        <p> Ян</p>
                         <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/Katy.png" alt="Мастер 3">
+                    <img src="images/Oleh.jpg" alt="Мастер 2" width="336" height="404">
                     <div class="info">
-                        <p>Екатерина</p>
+                        <p>Олег</p>
                         <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/Alex.png" alt="Мастер 1">
+                    <img src="images/Ренат.jpg" alt="Мастер 3">
                     <div class="info">
-                        <p>Алексей</p>
+                        <p>Ренат</p>
                         <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/marat.png" alt="Мастер 2" width="336" height="404">
+                    <img src="images/Kirill.jpg" alt="Мастер 1">
                     <div class="info">
-                        <p>Марат</p>
+                        <p>Кирилл</p>
                         <button class="open-modal">Записаться</button>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/Katy.png" alt="Мастер 3">
+                    <img src="images/Olga.jpg" alt="Мастер 3">
                     <div class="info">
-                        <p>Екатерина</p>
+                        <p>Ольга</p>
                         <button class="open-modal">Записаться</button>
                     </div>
                 </div>
@@ -816,8 +809,9 @@
                     <input type="text" id="name" placeholder="Ваше имя" required name="name">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="services" class="with-arrow" placeholder="Выберите услугу" required
-                           name="services">
+                    <select  id="services" class="with-arrow"  required name="services">
+                        <option value="">Выберите услугу</option>
+                    </select>
                 </div>
                 <div class="input-group">
                     <input type="text" id="date" name="date" class="with-arrow" placeholder="Введите дату" required>
@@ -826,15 +820,26 @@
                     <input type="text" id="phone" name="phone" placeholder="Ваш телефон" required>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="masters" name="masters" class="with-arrow" placeholder="Выберете мастера"
-                           required>
+                    <select  id="masters" name="masters" class="with-arrow" required>
+                        <option value="">Выберете мастера</option>
+                    </select>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="time" name="time" placeholder="Выберете время" required>
+                    <select  id="time" name="time" required>
+                        <option value="">Выберете время</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
                 </div>
             </div>
             <button class="submit">Оформить заявку</button>
             <button class="close-form">×</button>
+        </div>
+        <div class="popup2" id="popup2">
+            <div class="thank"> Спасибо что выбрали Strong Club! </div>
+            <div class="call">Наш администратор свяжется с вами в течении 10 минут, для уточнения деталей.</div>
+            <button class="close-popup">×</button>
         </div>
     </div>
     <div class="loader">
