@@ -3,6 +3,7 @@ const popupTrigger = document.getElementById('popup-trigger');
 const popup = document.getElementById('popup');
 const popup2 = document.getElementById('popup2');
 const closePopup = document.querySelector('.close-popup');
+const closePopup2 = document.querySelector('.close-popup2');
 const openModalButtons = document.querySelectorAll('.design .open-modal, .main__btn');
 const formRequest = document.getElementById('popuprequest');
 const closeFormBtn = document.querySelector('.close-form');
@@ -125,7 +126,7 @@ submitButton.addEventListener('click', (event) => {
                     if (msg.success === 1) {
                         formRequest.style.display = 'none';
                         popup2.style.display = 'block';
-                        closePopup.addEventListener('click', () => {
+                        closePopup2.addEventListener('click', () => {
                             popup2.style.display = 'none';
                         });
                     } else {
@@ -169,6 +170,10 @@ function populateMastersSelect() {
 
 // Вызываем функцию при загрузке страницы или после загрузки данных
 populateMastersSelect();
+
+
+
+
 
 
 

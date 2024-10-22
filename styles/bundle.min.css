@@ -923,10 +923,10 @@ body {
   z-index: 118;
   margin-top: 79px;
 }
-.masters .container .popup2 .close-popup {
+.masters .container .popup2 .close-popup2 {
   position: absolute;
   top: 20px;
-  right: 112px;
+  right: 36px;
   background: transparent;
   color: #ae8959;
   border: none;
@@ -1141,6 +1141,11 @@ footer .container {
   z-index: 88;
   color: white;
   padding-left: 10px;
+}
+
+.input-group select option {
+  background-color: #000;
+  color: #fff;
 }
 
 .input-group input::placeholder {
@@ -5813,10 +5818,10 @@ body {
   z-index: 118;
   margin-top: 79px;
 }
-.masters .container .popup2 .close-popup {
+.masters .container .popup2 .close-popup2 {
   position: absolute;
   top: 20px;
-  right: 112px;
+  right: 36px;
   background: transparent;
   color: #ae8959;
   border: none;
@@ -6031,6 +6036,11 @@ footer .container {
   z-index: 88;
   color: white;
   padding-left: 10px;
+}
+
+.input-group select option {
+  background-color: #000;
+  color: #fff;
 }
 
 .input-group input::placeholder {
